@@ -152,9 +152,9 @@ def move():
     print("ADJACENT WALLS: {}".format(adjacent_walls))
     print("UNOCCUPIED POSITIONS: {}".format(unoccupied))
     available_moves = [i for i in unoccupied if i not in adjacent_walls]
-    if health is 100:
+    if health == 100:
         registry.meal = {'x': -1, 'y': -1}
-    if registry.meal['x'] is -1:
+    if registry.meal['x'] == -1:
         registry.meal = random.choice(food)
     if head is registry.meal:
         registry.meal['x'] = -1;
